@@ -3,6 +3,13 @@
   "defaultCase": "shin-yang-2026-10-09",
   "cases": [
     {
+      "id": "youtube_WWwBljCsgaw",
+      "slug": "best-player-2026-game-2",
+      "title": "申真谞 · 卞相壹｜第6届最高棋士战挑战赛第2局",
+      "data": "data/cases/youtube_WWwBljCsgaw.json",
+      "sgf": "data/cases/youtube_WWwBljCsgaw.sgf"
+    },
+    {
       "id": "youtube_0P7_yjWrefE",
       "slug": "lanke-2026-final-1",
       "title": "卞相壹 · 申真谞｜烂柯杯决赛第1局",
