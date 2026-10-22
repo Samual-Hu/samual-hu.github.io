@@ -1,4 +1,5 @@
 import {formatTime,indexAtTime,chapterForMove,curveMoveAtX,scoreLabel} from './player-core.mjs';
+import {createReviewEditor} from './review-editor.mjs';
 const $=id=>document.getElementById(id);
 const icons={
 play:'<path d="m8 5 11 7-11 7z" fill="currentColor" stroke="none"/>',
@@ -16,8 +17,8 @@ const routeParts=location.pathname.slice(appBase.pathname.length).split('/').fil
 let language=routeParts.includes('en')||new URL(location.href).searchParams.get('lang')==='en'?'en':'zh';
 function caseUrl(item,lang=language,hash=''){const url=new URL(item.slug+'/'+(lang==='en'?'en/':''),appBase);url.hash=hash;return url;}
 const t=(zh,en)=>language==='en'?en:zh;
-let data,selectedCase,index=0,playing=false,speed=1,offset=0,startedAt=0;
-function rebuildTimeline(){let cursor=0;for(const e of data.events){const text=language==='en'?e.textEn:e.text;e.start=cursor;e.duration=text?Math.min(55,Math.max(1.8,language==='en'?text.split(/\s+/).length/3:text.length/5.5)):.7;cursor+=e.duration+.25;}data.duration=cursor;$('progress').max=String(cursor);}
+let data,selectedCase,index=0,playing=false,speed=1,offset=0,startedAt=0,editor=null;
+function rebuildTimeline(){let cursor=0;for(const e of data.events){const shown=editor?editor.effective(e):e;const text=language==='en'?shown.textEn:shown.text;e.start=cursor;e.duration=text?Math.min(55,Math.max(1.8,language==='en'?text.split(/\s+/).length/3:text.length/5.5)):.7;cursor+=e.duration+.25;}data.duration=cursor;$('progress').max=String(cursor);}
 function setLanguage(){
  document.documentElement.lang=language==='en'?'en':'zh-CN';$('language').value=language;
  $('source-button').textContent=t('关于本局 ↗','About this game ↗');
@@ -82,7 +83,7 @@ function moveTo(next,autoplay=false,at=0){
 function jumpMove(move,autoplay=true){
  const n=Math.max(1,Math.min(data.moveCount,Math.round(move)));
  selectedTopic=n;
- moveTo(chapterForMove(data,n),autoplay);
+ moveTo(chapterForMove(data,n),autoplay&&!editor?.enabled);
  history.replaceState(null,'',caseUrl(selectedCase,language,String(n)));
 }
 function jumpTime(time,autoplay){
@@ -115,7 +116,7 @@ function boardSvg(e){
  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620" role="img" aria-label="只读棋盘，实战第'+e.displayMove+'手'+(e.branch?'，变化第'+e.step+'手':'')+'" data-segment="'+e.id+'" data-topic="'+e.move+'" data-position="'+e.displayMove+'"><defs><linearGradient id="wood" x2=".9" y2="1"><stop stop-color="#e8c78d"/><stop offset=".5" stop-color="#e6c38b"/><stop offset="1" stop-color="#dbb579"/></linearGradient><radialGradient id="stone-b" cx="32%" cy="24%" r="80%"><stop stop-color="#565e5e"/><stop offset=".45" stop-color="#242d2f"/><stop offset="1" stop-color="#0d1418"/></radialGradient><radialGradient id="stone-w" cx="34%" cy="26%" r="82%"><stop stop-color="#ffffff"/><stop offset=".55" stop-color="#faf9f3"/><stop offset="1" stop-color="#dedbd0"/></radialGradient><pattern id="grain" width="43" height="37" patternUnits="userSpaceOnUse"><path d="M2 0q2 11 0 37M12 0q-2 14 1 37M29 0q3 21 0 37M40 0q-3 17 0 37" fill="none" stroke="#735029" stroke-width=".4" opacity=".06"/></pattern></defs><rect x="10" y="11" width="600" height="600" rx="7" fill="#4d3515" opacity=".08"/><rect x="10" y="8" width="600" height="600" rx="7" fill="url(#wood)"/><rect x="10" y="8" width="600" height="600" rx="7" fill="url(#grain)"/><g stroke="#795d35" stroke-width=".8" fill="none" opacity=".85">'+grid+'</g><g fill="#765d37">'+stars+'</g><g fill="#927345" font-size="11" font-family="system-ui" text-anchor="middle">'+coords+'</g>'+stones+'</svg>';
 }
 function render(){
- const e=current(),side=e.color==='B'?'黑':'白';
+ const e=editor?editor.effective(current()):current(),side=e.color==='B'?'黑':'白';
  if(selectedTopic&&(e.kind==='review'||e.kind==='finish'||e.kind==='main'&&e.move>selectedTopic))selectedTopic=null;
  $('board').innerHTML=boardSvg(e);
  $('board-move').textContent=e.branch?'以实战 '+e.displayMove+' 手为起点':e.displayMove+' / '+data.moveCount;
@@ -141,7 +142,7 @@ function render(){
  }
  document.querySelectorAll('#key-moves button').forEach(b=>b.classList.toggle('active',Number(b.dataset.move)===(selectedTopic??e.move)));
  if(e.kind==='pointer'){$('board-context').textContent=t('落点比较','Candidate point');$('segment-badge').textContent=t('落点比较','Candidate point');$('segment-label').textContent=(language==='en'?(e.color==='B'?'Black':'White'):side)+' '+e.coordinate;$('segment-detail').textContent=t('讲解所指的候选落点，棋盘保持在比较前的局面。','The highlighted point is a suggestion; the board remains at the position being discussed.');}
- renderChart();updateProgress();
+ renderChart();updateProgress();editor?.render();
 }
 function renderKeyMoves(){
  $('key-moves').innerHTML=data.keyMoves.map(m=>'<button type="button" data-move="'+m.move+'" aria-label="'+t('查看第'+m.move+'手讲解','Read commentary for move '+m.move)+'"><span class="key-primary"><i class="stone-dot '+(m.color==='B'?'black':'white')+'"></i>'+m.move+' <span>· '+m.coordinate+'</span></span><span class="key-loss">'+(Number.isFinite(m.pointsLoss)&&m.pointsLoss>=.05?'−'+m.pointsLoss.toFixed(1)+t('目',' pts'):t('看这一手','Read move'))+'</span></button>').join('');
@@ -221,7 +222,7 @@ $('source-button').addEventListener('click',()=>$('source-dialog').showModal());
 $('close-source').addEventListener('click',()=>$('source-dialog').close());
 $('source-dialog').addEventListener('click',event=>{if(event.target===$('source-dialog')){const r=$('source-dialog').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)$('source-dialog').close();}});
 document.addEventListener('keydown',event=>{
- if(!data||$('source-dialog').open||event.target.closest('input,select,button,a,[role=slider]'))return;
+ if(!data||$('source-dialog').open||event.target.closest('input,textarea,select,button,a,[contenteditable],[role=slider]'))return;
  if(event.code==='Space'){event.preventDefault();playing?stop():play();}
  else if(event.key==='ArrowRight'){event.preventDefault();moveTo(index+1,playing);}
  else if(event.key==='ArrowLeft'){event.preventDefault();moveTo(index-1,playing);}
@@ -229,7 +230,7 @@ document.addEventListener('keydown',event=>{
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)stop();});
 window.addEventListener('pagehide',()=>{if(data)stop();});
 new ResizeObserver(()=>renderChart()).observe($('chart-wrap'));
-new ResizeObserver(()=>{if(data)$('board').innerHTML=boardSvg(current());}).observe($('board'));
+new ResizeObserver(()=>{if(data)$('board').innerHTML=boardSvg(editor?editor.effective(current()):current());}).observe($('board'));
 window.addEventListener('hashchange',()=>{const match=location.hash.match(/^#(?:move=)?(\d+)$/);if(data&&match){selectedTopic=Number(match[1]);moveTo(chapterForMove(data,selectedTopic),false);}});
 try{
  const libraryResponse=await fetch('data/cases.json',{cache:'no-store'});if(!libraryResponse.ok)throw new Error('cases');
@@ -243,6 +244,7 @@ try{
  selector.addEventListener('change',()=>{location.href=caseUrl(library.cases.find(c=>c.id===selector.value)).href;});
  const response=await fetch(selected.data,{cache:'no-store'});if(!response.ok)throw new Error('data');
  data=await response.json();
+ editor=createReviewEditor({data,current,navigate:i=>moveTo(i,false),stop,refresh:()=>{rebuildTimeline();render();},notice:say});
  document.title='听棋 · '+data.black+'与'+data.white;
  $('black-name').textContent=data.black;$('white-name').textContent=data.white;
  $('game-event').textContent=data.event;$('game-date').textContent=data.date.replaceAll('-','.');

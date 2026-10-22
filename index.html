@@ -7,7 +7,7 @@
 <meta name="description" content="按讲解顺序阅读中英文围棋注释。自动切换实战与变化，点击目差曲线直达对应讲解。">
 <title>听棋 · 申真谞与杨楷文</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261022-cases-layout">
+<link rel="stylesheet" href="styles.css?v=20261022-human-review">
 </head>
 <body>
 <div class="app">
@@ -15,6 +15,7 @@
   <a class="brand" href="./" aria-label="听棋首页"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="11" cy="12" r="8" fill="currentColor"/><circle cx="22" cy="21" r="8" fill="#faf8f3" stroke="currentColor" stroke-width="1.4"/></svg><span>听棋</span></a>
   <label class="case-picker"><span class="sr-only">选择讲棋案例</span><select id="case-select" aria-label="选择讲棋案例"><option>正在读取案例…</option></select></label>
   <select id="language" class="language-picker" aria-label="讲解语言 / Language"><option value="zh">中文</option><option value="en">English</option></select>
+  <button id="review-toggle" class="review-toggle" type="button" aria-pressed="false">整理</button>
   <button id="source-button" class="text-button" type="button">关于本局 <span aria-hidden="true">↗</span></button>
 </header>
 <main class="workspace" aria-label="讲棋播放器">
@@ -33,6 +34,7 @@
       <p id="segment-detail" class="segment-detail">点击播放开始；也可以从下方曲线选择一手棋。</p>
     </section>
     <section class="key-section" aria-label="关键手快捷入口"><div class="section-heading"><h2 id="key-heading">从关键手看起</h2><span id="key-hint">点击直接跳转</span></div><div id="key-moves" class="key-grid"></div></section>
+    <section id="review-editor" aria-label="人工配句与注释编辑" hidden></section>
   </aside>
   <section class="transport" aria-label="播放控制">
     <div class="transport-buttons">
@@ -61,7 +63,7 @@
   <p class="fine-print">原话与手数对应仍供人工审阅。讲者提到的AI数值保留在原文中，与图表的数据分别注明来源。</p>
 </dialog>
 <div id="notice" class="notice" role="status" hidden></div>
-<script type="module" src="app.mjs?v=20261022-cursor-routes"></script>
+<script type="module" src="app.mjs?v=20261022-human-review"></script>
 </body>
 </html>
 
