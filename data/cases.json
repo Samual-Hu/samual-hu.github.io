@@ -3,6 +3,12 @@
   "defaultCase": "shin-yang-2026-10-09",
   "cases": [
     {
+      "id": "youtube_0P7_yjWrefE",
+      "title": "卞相壹 · 申真谞｜烂柯杯决赛第1局",
+      "data": "data/cases/youtube_0P7_yjWrefE.json",
+      "sgf": "data/cases/youtube_0P7_yjWrefE.sgf"
+    },
+    {
       "id": "youtube_ExR8qh0kHmY",
       "title": "李志贤 · 申真谞｜烂柯杯半决赛",
       "data": "data/cases/youtube_ExR8qh0kHmY.json",
