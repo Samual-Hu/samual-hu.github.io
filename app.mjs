@@ -85,7 +85,7 @@ function moveTo(next,autoplay=false,at=0){
  render();updateProgress();if(autoplay)play();
 }
 function jumpMove(move,autoplay=true){
- const n=Math.max(1,Math.min(183,Math.round(move)));
+ const n=Math.max(1,Math.min(data.moveCount,Math.round(move)));
  selectedTopic=n;
  moveTo(chapterForMove(data,n),autoplay);
  history.replaceState(null,'','#move='+n);
@@ -122,10 +122,10 @@ function render(){
  const e=current(),side=e.color==='B'?'黑':'白';
  if(selectedTopic&&(e.kind==='review'||e.kind==='finish'||e.kind==='main'&&e.move>selectedTopic))selectedTopic=null;
  $('board').innerHTML=boardSvg(e);
- $('board-move').textContent=e.branch?'以实战 '+e.displayMove+' 手为起点':e.displayMove+' / 183';
+ $('board-move').textContent=e.branch?'以实战 '+e.displayMove+' 手为起点':e.displayMove+' / '+data.moveCount;
  $('board-context').textContent=e.branch?'讲解变化 '+e.branch.slice(1).replace(/^0/,''):e.kind==='review'?'终局回顾':e.kind==='context'?'实战 '+e.displayMove+' · 回看 '+e.move:e.label||'实战';
  const isVariation=!!e.branch;
- $('segment-badge').textContent=isVariation?'变化':e.kind==='review'?'回顾':e.kind==='start'?'准备开始':e.kind==='finish'?'终局':'实战';
+ $('segment-badge').textContent=isVariation?'变化':e.kind==='review'?'回顾':e.kind==='context'?'局面':e.kind==='start'?'准备开始':e.kind==='finish'?'终局':'实战';
  $('segment-badge').classList.toggle('variation',isVariation);
  $('segment-label').textContent=isVariation?side+' '+e.coordinate+' · 变化 '+e.step+' / '+e.branchLength:e.move?'第'+e.move+'手 · '+side+' '+e.coordinate:'按讲解顺序';
  let text=e.text;
@@ -133,21 +133,31 @@ function render(){
  $('comment').textContent=text;
  $('comment').scrollTop=0;
  $('comment').style.color=e.text?'':'#8d958c';
- $('segment-detail').textContent=e.kind==='start'?'点击播放开始；也可以从下方曲线选择一手棋。':isVariation?'对应实战第'+e.move+'手的比较变化。播放结束后会自动继续。':e.kind==='context'?'当前棋盘是第'+e.displayMove+'手，讲解指向第'+e.move+'手。':e.kind==='finish'?'可以点击目差曲线，重新听任意一手。':e.kind==='review'?'按讲解顺序回看这手棋。':'';
+ $('segment-detail').textContent=e.kind==='start'?'点击播放开始；也可以从下方曲线选择一手棋。':isVariation?'对应实战第'+e.move+'手的比较变化。播放结束后会自动继续。':e.kind==='context'?(e.displayMove===e.move?'这一阶段的局面讲解。':'当前棋盘是第'+e.displayMove+'手，讲解指向第'+e.move+'手。'):e.kind==='finish'?'可以点击目差曲线，重新听任意一手。':e.kind==='review'?'按讲解顺序回看这手棋。':'';
  $('previous').disabled=index===0;$('next').disabled=index===data.events.length-1;
  if(selectedTopic&&e.move!==selectedTopic&&e.kind==='main')$('segment-detail').textContent='正在播放第'+selectedTopic+'手的完整讲解，先看相关局面。';
  document.querySelectorAll('#key-moves button').forEach(b=>b.classList.toggle('active',Number(b.dataset.move)===(selectedTopic??e.move)));
  renderChart();updateProgress();
 }
 function renderKeyMoves(){
- $('key-moves').innerHTML=data.keyMoves.map(m=>'<button type="button" data-move="'+m.move+'" aria-label="播放第'+m.move+'手'+(m.color==='B'?'黑':'白')+m.coordinate+'的讲解"><span class="key-primary"><i class="stone-dot '+(m.color==='B'?'black':'white')+'"></i>'+m.move+' <span>· '+m.coordinate+'</span></span><span class="key-loss">−'+Number(m.pointsLoss).toFixed(1)+'目</span></button>').join('');
+ $('key-moves').innerHTML=data.keyMoves.map(m=>'<button type="button" data-move="'+m.move+'" aria-label="播放第'+m.move+'手'+(m.color==='B'?'黑':'白')+m.coordinate+'的讲解"><span class="key-primary"><i class="stone-dot '+(m.color==='B'?'black':'white')+'"></i>'+m.move+' <span>· '+m.coordinate+'</span></span><span class="key-loss">'+(Number.isFinite(m.pointsLoss)&&m.pointsLoss>=.05?'−'+m.pointsLoss.toFixed(1)+'目':'听这一手')+'</span></button>').join('');
  document.querySelectorAll('#key-moves button').forEach(button=>button.addEventListener('click',()=>jumpMove(Number(button.dataset.move))));
 }
-function pointX(n){return plot.padding+n/183*(plot.width-plot.padding*2);}
+function pointX(n){return plot.padding+n/data.moveCount*(plot.width-plot.padding*2);}
 function pointY(value){return plot.bottom-(value-plot.min)/(plot.max-plot.min)*(plot.bottom-plot.top);}
 function renderChart(){
  if(!data)return;
  const svg=$('chart');plot.width=Math.max(240,svg.clientWidth||1100);
+ if(!data.curve?.length){
+   const n=Math.max(1,current().move||1),x=pointX(n);
+   const ticks=[...new Set([1,...Array.from({length:Math.floor(data.moveCount/30)},(_,i)=>(i+1)*30),data.moveCount])];
+   svg.innerHTML='<path class="chart-grid" d="M'+plot.padding+' 52H'+(plot.width-plot.padding)+'"/>'+ticks.map(m=>'<text class="chart-axis-label" text-anchor="middle" x="'+pointX(m)+'" y="94">'+m+'</text>').join('')+data.keyMoves.map(m=>'<circle class="chart-loss" cx="'+pointX(m.move)+'" cy="52" r="3.4" data-move="'+m.move+'"><title>第'+m.move+'手的讲解</title></circle>').join('')+'<text class="chart-axis-label" text-anchor="middle" x="'+plot.width/2+'" y="25">暂无可复用的形势曲线 · 可按手数跳转</text><path class="chart-cursor" d="M'+x+' 37V78"/><circle class="chart-current" cx="'+x+'" cy="52" r="4.2"/>';
+   svg.setAttribute('viewBox','0 0 '+plot.width+' 98');svg.setAttribute('aria-valuenow',String(n));svg.setAttribute('aria-valuetext','第'+n+'手');
+   $('chart-heading').textContent='实战手数';$('evaluation').textContent='第'+n+'手';
+   document.querySelector('.chart-modes').hidden=true;
+   return;
+ }
+ document.querySelector('.chart-modes').hidden=false;
  const values=data.curve.map(p=>mode==='score'?p.black_score_lead_points:p.black_winrate_percent);
  plot.min=mode==='score'?Math.min(-3,Math.floor(Math.min(...values)*1.2)):0;
  plot.max=mode==='score'?Math.max(10,Math.ceil(Math.max(...values)*1.08/10)*10):100;
@@ -158,7 +168,7 @@ function renderChart(){
  let markup='<defs><linearGradient id="curve-fill" x2="0" y2="1"><stop stop-color="#2d6662" stop-opacity=".15"/><stop offset="1" stop-color="#2d6662" stop-opacity=".02"/></linearGradient></defs>';
  markup+='<path class="chart-grid" d="M'+plot.padding+' '+zero+'H'+(plot.width-plot.padding)+'"/>';
  markup+='<path d="'+d+'L'+coords.at(-1)[0]+' '+zero+'L'+coords[0][0]+' '+zero+'Z" fill="url(#curve-fill)"/><path class="chart-line" d="'+d+'"/>';
- for(const move of [1,30,60,90,120,150,183])markup+='<text class="chart-axis-label" text-anchor="middle" x="'+pointX(move)+'" y="94">'+move+'</text>';
+ for(const move of [...new Set([1,...Array.from({length:Math.floor(data.moveCount/30)},(_,i)=>(i+1)*30),data.moveCount])])markup+='<text class="chart-axis-label" text-anchor="middle" x="'+pointX(move)+'" y="94">'+move+'</text>';
  const topLabel=mode==='score'?'黑+'+plot.max:'100%',lowLabel=mode==='score'?'0':'50%';
  markup+='<text class="chart-axis-label" x="0" y="12">'+topLabel+'</text><text class="chart-axis-label" x="0" y="'+Math.min(78,zero+3)+'">'+lowLabel+'</text>';
  for(const m of data.keyMoves){
@@ -176,12 +186,12 @@ function chartMove(event){
  const tagged=event.target.closest('[data-move]');
  if(tagged)return Number(tagged.dataset.move);
  const rect=$('chart').getBoundingClientRect();
- return curveMoveAtX(event.clientX-rect.left,rect.width,183,plot.padding);
+ return curveMoveAtX(event.clientX-rect.left,rect.width,data.moveCount,plot.padding);
 }
 function hoverChart(event){
  const n=chartMove(event),m=data.curve[n-1],ref=data.mainline[n-1],rect=$('chart-wrap').getBoundingClientRect();
  const tooltip=$('chart-tooltip');
- tooltip.textContent='第'+n+'手 · '+(ref.color==='B'?'黑':'白')+' '+ref.coordinate+'\n'+scoreLabel(m.black_score_lead_points)+' · 黑方胜率 '+m.black_winrate_percent.toFixed(1)+'%';
+ tooltip.textContent='第'+n+'手 · '+(ref.color==='B'?'黑':'白')+' '+ref.coordinate+'\n'+(m?scoreLabel(m.black_score_lead_points)+' · 黑方胜率 '+m.black_winrate_percent.toFixed(1)+'%':'点击收听对应讲解');
  tooltip.style.whiteSpace='pre-line';tooltip.hidden=false;
  tooltip.style.left=Math.min(rect.width-tooltip.offsetWidth-2,Math.max(0,event.clientX-rect.left-tooltip.offsetWidth/2))+'px';
 }
@@ -202,7 +212,7 @@ $('chart').addEventListener('pointermove',event=>{if(data)hoverChart(event);});
 $('chart').addEventListener('pointerleave',()=>{$('chart-tooltip').hidden=true;});
 $('chart').addEventListener('keydown',event=>{
  if(!data)return;let n=current().move||1;
- if(event.key==='ArrowRight')n++;else if(event.key==='ArrowLeft')n--;else if(event.key==='Home')n=1;else if(event.key==='End')n=183;else return;
+ if(event.key==='ArrowRight')n++;else if(event.key==='ArrowLeft')n--;else if(event.key==='Home')n=1;else if(event.key==='End')n=data.moveCount;else return;
  event.preventDefault();jumpMove(n,false);
 });
 $('mode-score').addEventListener('click',()=>{mode='score';renderChart();});
@@ -222,8 +232,25 @@ new ResizeObserver(()=>renderChart()).observe($('chart-wrap'));
 new ResizeObserver(()=>{if(data)$('board').innerHTML=boardSvg(current());}).observe($('board'));
 window.addEventListener('hashchange',()=>{const match=location.hash.match(/move=(\d+)/);if(data&&match){selectedTopic=Number(match[1]);moveTo(chapterForMove(data,selectedTopic),false);}});
 try{
- const response=await fetch('data/lecture.json');if(!response.ok)throw new Error('data');
+ const libraryResponse=await fetch('data/cases.json');if(!libraryResponse.ok)throw new Error('cases');
+ const library=await libraryResponse.json();
+ const requested=new URL(location.href).searchParams.get('case')||library.defaultCase;
+ const selected=library.cases.find(c=>c.id===requested);
+ if(!selected)throw new Error('Unknown lecture case');
+ const selector=$('case-select');selector.replaceChildren();
+ for(const item of library.cases){const option=document.createElement('option');option.value=item.id;option.textContent=item.title;option.selected=item.id===selected.id;selector.append(option);}
+ selector.addEventListener('change',()=>{const url=new URL(location.href);url.searchParams.set('case',selector.value);url.hash='';location.href=url.href;});
+ const response=await fetch(selected.data);if(!response.ok)throw new Error('data');
  data=await response.json();
+ document.title='听棋 · '+data.black+'与'+data.white;
+ $('black-name').textContent=data.black;$('white-name').textContent=data.white;
+ $('game-event').textContent=data.event;$('game-date').textContent=data.date.replaceAll('-','.');
+ $('game-result').textContent=data.result+' · '+data.moveCount+'手'+(data.komiVerified===false?' · 贴目待核实':Number.isFinite(data.komi)?' · 黑贴'+data.komi+'目':'');
+ $('chart').setAttribute('aria-valuemax',String(data.moveCount));
+ $('analysis-description').textContent=data.sources.analysisDescription||(data.curve?.length?'Kifubara已有的KataGo分析，b18网络，每手2,500次访问。图表为黑方视角，正目差表示黑棋领先。':'暂无与本局逐手核对的公开分析数据。下方按实战手数跳转，不显示估算胜率。');
+ $('analysis-credit').textContent=data.curve?.length?'实战手数 · KataGo / '+(data.sources.visits||2500)+' visits':'实战手数 · 原话讲解';
+ $('analysis-hint').textContent=data.curve?.length?'点击曲线，听这一手的讲解':'点击手数，听这一手的讲解';
+ for(const [id,url] of [['analysis-source',data.sources.analysis],['game-source',data.sources.game],['lecture-source',data.sources.video],['sgf-download',selected.sgf]]){const link=$(id);link.hidden=!url;if(url)link.href=url;}
  $('progress').max=String(data.duration);
  $('coverage').textContent=data.moveCount+'手实战、'+data.annotationCount+'段原话、'+data.variationCount+'条已核对变化。'+data.sources.coverage;
  renderKeyMoves();

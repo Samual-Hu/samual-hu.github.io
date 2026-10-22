@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "defaultCase": "shin-yang-2026-10-09",
+  "cases": [
+    {
+      "id": "youtube_ExR8qh0kHmY",
+      "title": "李志贤 · 申真谞｜烂柯杯半决赛",
+      "data": "data/cases/youtube_ExR8qh0kHmY.json",
+      "sgf": "data/cases/youtube_ExR8qh0kHmY.sgf"
+    },
+    {
+      "id": "shin-yang-2026-10-09",
+      "title": "申真谞 · 杨楷文｜烂柯杯16强",
+      "data": "data/lecture.json",
+      "sgf": "data/game.sgf"
+    }
+  ]
+}
