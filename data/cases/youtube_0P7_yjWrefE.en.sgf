@@ -17,7 +17,8 @@ W[fc];B[df];W[dg];B[ef];W[cd];B[cc];W[ce];B[dc]
 C[After that, a classic double-approach joseki took shape in the upper left area,]
 ;
 C[and next White made a two-space extension at the top.
-Now Black faces a choice again; the big points on the board are simply the relatively open sides, such as the top area,]
+Now Black faces a choice again; the big points on the board are simply the relatively open sides, such as the top area,
+Another direction is to invade around the lower side, which is still a fighting stance.]
 W[ic](;B[nd]
 C[In the actual game, Black seemed to avoid a fight and chose to play a knight's move in the top area first. The purpose of this move is to press White low while expanding Black's own potential in the center and on the right side.]
 ;
@@ -540,7 +541,8 @@ C[then with a diagonal move on the second line, Black's corner can come back to 
 ))(;B[hd]C[or after playing a peep,];W[hc];B[di]
 C[turning to the left side to check White's few stones in this area.])(;B[bo]
 C[Of course, Black could also start directly on the left side, exchanging a knight's move at the bottom first,]
-;W[bp];B[di]C[and then pincering—that would also be a playable game.]))(;
-C[White can simply jump out,]W[cn];B[jp]
+;W[bp];B[di]C[and then pincering—that would also be a playable game.])(;B[kc]
+C[Black can choose to invade directly and fight,])(;B[jd]
+C[or play a shoulder hit here,]))(;C[White can simply jump out,]W[cn];B[jp]
 C[so Black makes an extension around the bottom,];
 C[and White checks again—that would also be a playable game.]W[lq]))

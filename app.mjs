@@ -11,7 +11,10 @@ muted:'<path d="m11 5-6 4H2v6h3l6 4zM16 9l6 6m0-6-6 6"/>'
 };
 function icon(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+icons[name]+'</svg>';}
 for(const [id,name] of [['play','play'],['previous','previous'],['next','next']])$(id).innerHTML=icon(name);
-let language=new URL(location.href).searchParams.get('lang')==='en'?'en':'zh';
+const appBase=new URL('./',import.meta.url);
+const routeParts=location.pathname.slice(appBase.pathname.length).split('/').filter(Boolean);
+let language=routeParts.includes('en')||new URL(location.href).searchParams.get('lang')==='en'?'en':'zh';
+function caseUrl(item,lang=language,hash=''){const url=new URL(item.slug+'/'+(lang==='en'?'en/':''),appBase);url.hash=hash;return url;}
 const t=(zh,en)=>language==='en'?en:zh;
 let data,selectedCase,index=0,playing=false,speed=1,offset=0,startedAt=0;
 function rebuildTimeline(){let cursor=0;for(const e of data.events){const text=language==='en'?e.textEn:e.text;e.start=cursor;e.duration=text?Math.min(55,Math.max(1.8,language==='en'?text.split(/\s+/).length/3:text.length/5.5)):.7;cursor+=e.duration+.25;}data.duration=cursor;$('progress').max=String(cursor);}
@@ -20,12 +23,11 @@ function setLanguage(){
  $('source-button').textContent=t('关于本局 ↗','About this game ↗');
  $('previous').setAttribute('aria-label',t('上一段','Previous segment'));$('next').setAttribute('aria-label',t('下一段','Next segment'));
  $('key-heading').textContent=t('从关键手看起','Explore key moves');$('key-hint').textContent=t('点击直接跳转','Click to jump');
- $('content-credit').textContent=t('明玥谈棋 · 注释整理','Mingyue Go · edited commentary');$('reading-mode').textContent=t('中英文本 · 无配音','Bilingual text · no narration');
  $('mode-score').textContent=t('目差','Score');$('mode-winrate').textContent=t('胜率','Win rate');
  $('analysis-hint').textContent=t('点击曲线或手数，查看对应讲解','Click the chart to read a move’s commentary');
  $('sgf-download').textContent=t('下载中文注释谱 ↓','Download English SGF ↓');
  if(selectedCase)$('sgf-download').href=language==='en'?selectedCase.sgf.replace(/\.sgf$/,'.en.sgf'):selectedCase.sgf;
- if(data){rebuildTimeline();renderKeyMoves();render();}
+ if(data){rebuildTimeline();renderKeyMoves();render();updatePlayButton();}
 }
 let epoch=0,timer=0,raf=0,noticeTimer=0,mode='score',resumeAfterSeek=false,seeking=false;
 let selectedTopic=null;
@@ -81,7 +83,7 @@ function jumpMove(move,autoplay=true){
  const n=Math.max(1,Math.min(data.moveCount,Math.round(move)));
  selectedTopic=n;
  moveTo(chapterForMove(data,n),autoplay);
- history.replaceState(null,'','#move='+n);
+ history.replaceState(null,'',caseUrl(selectedCase,language,String(n)));
 }
 function jumpTime(time,autoplay){
  selectedTopic=null;
@@ -93,6 +95,7 @@ function boardSvg(e){
  const coordFont=Math.max(12,9*scale),markFont=Math.max(12,8*scale);
  $('board').style.setProperty('--board-coord-size',coordFont+'px');
  let grid='',coords='',stones='',stars='';
+ if(e.suggestedPoint){const x=start+e.suggestedPoint[0]*gap,y=start+e.suggestedPoint[1]*gap;stones+='<circle class="candidate-point" cx="'+x+'" cy="'+y+'" r="11" fill="none" stroke="#bb613c" stroke-width="2.5"/><path d="M'+(x-5)+' '+y+'h10M'+x+' '+(y-5)+'v10" stroke="#bb613c" stroke-width="1.6"/>';}
  for(let n=0;n<N;n++){
    const p=start+n*gap;
    grid+='<path d="M40 '+p+'H580M'+p+' 40V580"/>';
@@ -137,6 +140,7 @@ function render(){
   $('segment-detail').textContent=isVariation?'Comparison for game move '+e.move+'. The chart always shows the actual game.':e.kind==='context'&&e.displayMove!==e.move?'Showing move '+e.displayMove+'; discussing move '+e.move+'.':e.kind==='review'?'Returning to an earlier move in lecture order.':'';
  }
  document.querySelectorAll('#key-moves button').forEach(b=>b.classList.toggle('active',Number(b.dataset.move)===(selectedTopic??e.move)));
+ if(e.kind==='pointer'){$('board-context').textContent=t('落点比较','Candidate point');$('segment-badge').textContent=t('落点比较','Candidate point');$('segment-label').textContent=(language==='en'?(e.color==='B'?'Black':'White'):side)+' '+e.coordinate;$('segment-detail').textContent=t('讲解所指的候选落点，棋盘保持在比较前的局面。','The highlighted point is a suggestion; the board remains at the position being discussed.');}
  renderChart();updateProgress();
 }
 function renderKeyMoves(){
@@ -199,7 +203,7 @@ $('play').addEventListener('click',()=>playing?stop():play());
 $('previous').addEventListener('click',()=>{selectedTopic=null;moveTo(index-1,playing);});
 $('next').addEventListener('click',()=>{selectedTopic=null;moveTo(index+1,playing);});
 $('speed').addEventListener('change',()=>{const was=playing;stop();speed=Number($('speed').value);if(was)play();});
-$('language').addEventListener('change',()=>{const was=playing;stop();language=$('language').value;offset=0;const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);setLanguage();if(was)play();});
+$('language').addEventListener('change',()=>{const was=playing;stop();language=$('language').value;offset=0;history.replaceState(null,'',caseUrl(selectedCase,language,location.hash));setLanguage();if(was)play();});
 $('progress').addEventListener('pointerdown',()=>{resumeAfterSeek=playing;seeking=true;stop();});
 $('progress').addEventListener('input',()=>{$('clock').textContent=formatTime($('progress').value)+' / '+formatTime(data.duration);});
 $('progress').addEventListener('change',()=>{const resume=seeking?resumeAfterSeek:playing;seeking=false;jumpTime(Number($('progress').value),resume);});
@@ -226,17 +230,17 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)st
 window.addEventListener('pagehide',()=>{if(data)stop();});
 new ResizeObserver(()=>renderChart()).observe($('chart-wrap'));
 new ResizeObserver(()=>{if(data)$('board').innerHTML=boardSvg(current());}).observe($('board'));
-window.addEventListener('hashchange',()=>{const match=location.hash.match(/move=(\d+)/);if(data&&match){selectedTopic=Number(match[1]);moveTo(chapterForMove(data,selectedTopic),false);}});
+window.addEventListener('hashchange',()=>{const match=location.hash.match(/^#(?:move=)?(\d+)$/);if(data&&match){selectedTopic=Number(match[1]);moveTo(chapterForMove(data,selectedTopic),false);}});
 try{
  const libraryResponse=await fetch('data/cases.json',{cache:'no-store'});if(!libraryResponse.ok)throw new Error('cases');
  const library=await libraryResponse.json();
- const requested=new URL(location.href).searchParams.get('case')||library.defaultCase;
- const selected=library.cases.find(c=>c.id===requested);
+ const requested=new URL(location.href).searchParams.get('case')||routeParts[0]||library.defaultCase;
+ const selected=library.cases.find(c=>c.id===requested||c.slug===requested);
  if(!selected)throw new Error('Unknown lecture case');
  selectedCase=selected;
  const selector=$('case-select');selector.replaceChildren();
  for(const item of library.cases){const option=document.createElement('option');option.value=item.id;option.textContent=item.title;option.selected=item.id===selected.id;selector.append(option);}
- selector.addEventListener('change',()=>{const url=new URL(location.href);url.searchParams.set('case',selector.value);url.hash='';location.href=url.href;});
+ selector.addEventListener('change',()=>{location.href=caseUrl(library.cases.find(c=>c.id===selector.value)).href;});
  const response=await fetch(selected.data,{cache:'no-store'});if(!response.ok)throw new Error('data');
  data=await response.json();
  document.title='听棋 · '+data.black+'与'+data.white;
@@ -251,9 +255,9 @@ try{
  $('progress').max=String(data.duration);
  $('coverage').textContent=data.moveCount+'手实战、'+data.annotationCount+'段原话、'+data.variationCount+'条已核对变化。'+data.sources.coverage;
  setLanguage();
- const match=location.hash.match(/move=(\d+)/);
+ const match=location.hash.match(/^#(?:move=)?(\d+)$/);
  if(match){selectedTopic=Number(match[1]);index=chapterForMove(data,selectedTopic);}
- render();
+ history.replaceState(null,'',caseUrl(selected,language,match?match[1]:''));render();
 }catch(error){
  $('board').innerHTML='<p class="loading" role="alert">棋局暂时未能打开，请刷新重试。</p>';
  $('comment').textContent='暂时未能载入这盘讲棋。';
