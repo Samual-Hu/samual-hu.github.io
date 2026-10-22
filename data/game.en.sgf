@@ -1,0 +1,231 @@
+(;FF[4]AP[video2data-verbatim:3]BR[九段]CA[UTF-8]DT[2026-10-09]
+EV[第4届衢州烂柯杯16强战]GM[1]
+GN[明玥谈棋｜申真谞—杨楷文｜2026-10-09]KM[7.5]PB[申真谞]
+PW[杨楷文]RE[B+R]RU[Chinese]SO[https://igo-kifu.com/zh-TW/kifu/109288]SZ[19]
+WR[九段];B[pd];W[cq];B[pq]C[Black opens with star point and komoku.];
+C[White brings out his usual 3-3 and komoku opening.]W[dc];B[ce]
+C[Next, Black approaches the corner.];W[cd];B[de];
+C[After the diagonal attachment, White jumps out to take territory.]W[fc];B[po]
+C[Instead of extending on the left right away, Black returns to enclose the lower right corner, following a standard AI pattern.]
+N[第9手 黑Q5];C[Next, White checks.]W[ci];B[dp]
+C[Black then plays a shoulder hit from the bottom.];
+C[White plays along the stones.]W[dq];B[fp]C[Black jumps.];
+C[White pincers at the top to settle the shape.]W[do];B[eh]
+C[Then Black moves out from the top with a large knight's move.];
+C[White's diagonal move is the urgent point of the shape.]N[第16手 白D10]
+W[dj];B[ej]C[Black attaches.];C[White plays a hane.]W[ek];B[fj]
+C[Black extending again is also a common progression.];
+C[On the next move, White jumps at the top, hitting the key point to pressure Black's shape.]
+N[第20手 白C13]W[cg];B[gl]
+C[In response, Black chooses a knight's move in the center.
+Thus, early in the opening, a framework of territory versus moyo has taken initial shape.]
+N[第21手 黑G8](;
+C[In the actual game, however, White suddenly initiates action here by attaching to move out from the top, but this move receives a poor evaluation from Fine Art, dropping White's win rate to around 38%.
+Of course, looking further back, White's forced attachment and push out to fight at the top had actually already planted the seeds for the later mistake.]
+N[第22手 白E13]W[eg];B[fg]C[On the next move, Black plays another hane.];
+C[Then White extends out from the top.]W[ef];B[dh]
+C[Black extends, probing White's response.]N[第25手 黑D12](;
+C[In the actual game, White chooses to connect at the top, aiming to capture these two stones.]
+N[第26手 白D13]W[dg](;B[dk]
+C[In the actual game, Black chooses to cut first here, bringing the game back to an even 50-50.
+Meanwhile, the problem on the side is still unresolved, and the cutting Black stone remains a thorn in White's side.]
+N[第27手 黑D9](;
+C[In the actual game, however, White is clearly worried about Black pushing and cutting after reinforcing here, so on the next move White reinforces with a tiger's mouth on the second line. Yet this move is a serious mistake; after this exchange, White's win rate plummets from 46% to 9%, and Black's lead on the board shoots straight toward 15 points, because Black clearly profited from the exchange of these two moves.
+In the opening fighting on the left, facing this cut by Black, White's second-line tiger's mouth was the losing move.]
+N[第28手 白B10]W[bj];B[dd]
+C[After profiting, Black immediately and accurately moves out from the top.]
+N[第29手 黑D16];C[When White connects,]W[cc];B[fd]
+C[Black attaches to move out.
+Locally, White has suffered losses both at the top and at the bottom.]
+;C[On the next move, White bends out again.]W[ff];B[gc]C[Black plays a hane.];
+C[When White connects,]W[ec];B[fe]
+C[Black plays a bamboo joint here.
+This is a forcing shape; White cannot allow himself to be sealed in by Black here under any circumstances.]
+N[第35手 黑F15];C[White jumps out.]W[hf];B[hd]
+C[Then Black reinforces from the top with a tiger's mouth.]N[第37手 黑H16];
+C[On the next move, White extends out.]W[el];B[eo]
+C[Black plays a tiger's mouth from below, unleashing another combination.
+Looking at the local position, Black's research into this area is clearly much deeper.]
+N[第39手 黑E5];C[On the next move, White gives atari.]W[cp];B[dl]
+C[Black crawls out from the top.];C[When White plays a hane,]W[dm];B[di]
+C[Black gives atari first, in impeccable order.];W[cj];B[dn]
+C[And then gives atari from below.
+White once again faces a choice.];
+C[So when Black gives atari, White chooses to connect at the top, which is the top choice.]
+N[第46手 白E7]W[em];B[co]C[Next, Black is happy to capture into a ponnuki.]
+N[第47手 黑C5];
+C[White's corner still needs reinforcement, so White plays another knight's move.]
+W[fr];B[cm]C[Black plays a hane from the top in sente.];C[White cuts.]W[cl];
+B[bl]C[Black gives atari.];C[White unleashes a placement tesuji.]W[bn];B[bo];
+W[bm];B[cn]C[But this is also within Black's expectations.];
+C[Here, both sides finish settling the shape.]W[bk];B[gq]
+C[Black takes sente again and seals from below with a diagonal move.]
+N[第57手 黑G3];C[White crawls.]W[gr];B[iq]
+C[Black jumps again.
+Throughout this sequence of moves, Black plays with a strong sense of rhythm and complete ease.]
+;
+C[White, meanwhile, can only struggle to cope.
+Next, White faces a choice once again.
+So in the actual game, White chooses to extend from below, but it is hard to look after both the top and the bottom.]
+N[第60手 白H2]W[hr];B[kc]
+C[Black occupies the key extension point at the top.];
+C[On the next move, White invades the corner to take territory.]
+N[第62手 白R17]W[qc];B[pc]C[Black blocks.];W[qd];B[qf]N[第65手 黑R14];
+W[qe];B[pe];
+C[Now White secures enough territory first, staking the outcome of the game on the fight to settle the weak group in the center.]
+W[rf];B[qb]
+C[On the next move, Black plays a hane at the top.
+So now we see that the biggest problem for White is that his potential to make territory across the whole board has been greatly restricted, limited only to the territory on the left, while everywhere else it is very difficult for White to make territory; next, he can only find a way to reduce Black's territory and endure Black's attack.]
+;C[White attaches first to leave aji on the outside.]W[kd];B[jc]
+C[Black simply pulls back solidly, which is also the top choice.]
+N[第71手 黑K17];C[Then White returns to answer in the corner.]W[rb];B[re]
+C[Black cuts as planned.];
+C[White cuts and gives atari from the outside to fight.]W[pf];B[qg]
+C[Black extends out.];C[White captures again.]W[rd];B[rg]C[Black gives atari.];
+W[pb];B[ob];
+C[White captures one stone in atari from the top, leaving a cutting point in Black's stones at the top.]
+W[qa];B[gg]C[But Black immediately extends out on the left.];
+C[When White connects,]W[gf];B[qj]
+C[And steadily extends along the side.
+Since Black has potential to make territory everywhere, White is now at a loss as to where to bite in.]
+N[第83手 黑R10];
+C[On the next move, White invades on the right to start a fight.]
+N[第84手 白R7]W[qm];B[om]
+C[Black caps in the center, which is naturally the key point as well.];
+C[Next, White plays another knight's move.]W[ro];B[qp]
+C[Black answers everything.
+It is not difficult for White to make a living group here, but the problem is that if making life strengthens Black on the outside and allows the entire center to naturally become territory, White will undoubtedly suffer a crushing defeat.]
+;C[So next, White plays a diagonal move out into the center.]W[pl];B[ok]
+C[Black chooses the most severe response, jumping directly to seal White in.];
+C[White pushes through.]W[ol];B[nl]C[Black blocks.];
+C[Then White cuts again, looking for a way forward on the outside.]W[nk];B[nj]
+C[After Black plays a forceful atari,];W[mk];B[pm]
+C[Black wedges here, testing White's attitude in return.
+White is in no mood to make life along the side right now, because if Black adds another move on the outside, White will once again fall into a passive position in the fighting across the entire outside.
+Moreover, the fighting here is also somewhat related to the ladder.]
+N[第95手 黑Q7];
+C[So we can understand the purpose behind White's next push at the bottom: preparing for the fighting on the right.]
+N[第96手 白H3]W[hq];B[ml]
+C[However, Black is very experienced; sensing White's intention, Black decisively plays elsewhere to reinforce in the center.]
+N[第97手 黑N8];
+C[Although White's knight's move threatens the Black stones on the left,]W[go];
+B[fn]
+C[Black is thick on the outside, and after playing a diagonal move here, manages to settle the group properly.]
+;
+C[Next, White plays a hane at the head of two stones in the center, looking for a chance to fight.]
+W[ll];B[lm]C[Black answers.];C[When White connects again,]W[lk];B[km]
+C[Black extends out.
+This White group on the side is not alive, and the four stones in the center are not settled either; Black has now set up a splitting attack.]
+N[第103手 黑L7];
+C[On the next move, White unleashes the extraordinary measure of a second-line attachment underneath.
+In the actual game, White chooses the second-line attachment underneath here, still trying hard to complicate the situation and hoping Black will fight in this area so as to seek a chance to turn the game around.]
+N[第104手 白S10]W[rj];B[ql]
+C[However, Black stays rock-solid with the lead; the next move is a direct cut and atari, a series of forcing moves based purely on straight-line reading.]
+;C[White escapes.]W[pk];B[pj]C[Black applies a squeeze.];C[White captures.]
+W[oj];B[qk]C[After Black forces White into a dumpy shape,];W[ok];B[jk]
+C[Black then plays a knight's move from the center to continue the attack. The White stones on the side have been cut off and cannot make life locally for now, while the White stones on the outside are still not alive, further expanding Black's lead.]
+N[第111手 黑K9];C[On the next move, White peeps at the top.]W[ph];B[pg]
+C[Black pushes through.];C[Then when White pulls back,]W[qn];B[qh]
+C[Black solidly connects underneath at the top.];
+C[Since White is still not alive in the center, White now pushes through.]W[pn]
+;B[on]C[Black blocks.];
+C[White cuts, trying hard to create some trouble for Black around the bottom.]
+W[oo];B[mm]C[However, Black counters every move and answers everything.];
+C[And when White extends again,]W[op];B[oq]
+C[Black attaches along the stones from the bottom.];C[White jumps out.]W[mp];
+B[nq]C[Black extends again.];
+C[White plays a knight's move from the bottom. Thus we see that although White appears to have connected around the lower side, this shape is still very thin.]
+W[kq];B[pp]
+C[On the next move, Black solidly reinforces in the corner, giving White no chance to make life along the side.]
+N[第125手 黑Q4];
+C[Next, White plays a knight's move in the center, keeping a close eye on Black's cutting points in the center and preparing for a decisive battle with Black.]
+W[hm];B[gn]C[However, Black first pushes through on the left.];
+C[When White blocks,]W[hn];B[ho]
+C[Black cuts, settling this group on the left first.];C[And White plays atari.]
+W[io];B[hp];W[ip];B[gp]C[Black simply answers everything.];
+C[In the actual game, White reinforces at the bottom.]W[lo];B[jm]
+C[Black also reinforces in the center. Black's play is steady yet sharp, giving no chances at all, and after this move Black is once again eyeing White's cutting point.]
+N[第135手 黑K7];
+C[White has no choice but to connect first to hold onto the points.]W[in];B[nh]
+C[Then Black jumps from the top, resuming a fierce attack on the central group.]
+;C[At this point, White has no choice but to escape.]W[kj];B[kh]
+C[Black caps again in the center.];C[Next, when White presses,]W[jj];B[ik]
+C[Black solidly extends.];C[On the next move, White attaches.]W[jh];B[jg]
+C[Black plays a hane.];C[White extends again.]W[ih];B[ij]
+C[Black continues to exploit White's shape from the bottom.](;
+C[In the actual game, White judges that playing this way would undoubtedly be a slow death, and so decides to make one last gamble by attaching and pushing out from the top. However, this move has both pros and cons.]
+N[第146手 白N12]W[mh];B[mg]C[Because Black plays a hane in the center.];
+C[White plays a counter-hane.]W[lg];B[lh]C[After Black plays atari,];W[mi];
+B[lf]
+C[and captures at the top, as Black becomes stronger in this area, the connection problems of the White stones on the left are gradually exposed.]
+N[第151手 黑M14];
+C[On the next move, White is still unwilling to reinforce here, as otherwise all the exchanges at the top would have merely helped Black get stronger, so White can only keep fighting a way out.]
+W[ng];B[kg]C[Black captures.];C[White plays atari again.]W[mf];B[oh]
+C[Black bumps at the bottom.];C[When White captures,]W[lg];B[le]
+C[Black extends from the top.];
+C[This way, by the time White goes back to reinforce, because Black has grown strong in this area, Black is now ready to go for the kill.]
+W[ii];B[hg]
+C[On the next move, Black directly pushes through and cuts from the left. Thus White's dragon cannot connect back, and how this dragon can live now becomes the most critical problem facing White.]
+N[第159手 黑H13];C[On the next move, White pushes through.]W[ig];B[if]
+C[Black forcefully cuts upward.];C[White peeps again.]W[gi];B[fh]
+C[Black connects.];C[Then White attaches along the stone here.]W[gj];B[fk]
+C[Next, Black answers steadily step by step.];
+C[On the next move, when White wedges again,]W[gk];B[hi]
+C[Black seizes the moment to unleash a wedge tesuji, tightening White's liberties.]
+N[第167手 黑H11];C[White captures.]W[hh];B[gh]C[Black cuts.];
+C[White captures.]W[hj];B[hk]
+C[Black tightens the liberties at the bottom; since there is a connect-and-die here, White cannot make a move around the lower side for the time being either.]
+N[第171手 黑H9];
+C[On the next move, White pushes along the stones again at the top.]W[me];B[ld]
+C[Black answers.];C[Then White bends here to build eye space.]W[li];B[mg]
+C[Black takes the ko at the top.];
+C[At this point, White's connection is sente.]W[ji];B[fi]C[Black gives atari.];
+C[White takes the ko back.]W[lg];B[ie]
+C[And Black adds another move from the top.];
+C[On the next move, White connects, which is already a move played in preparation to resign.
+In the actual game, after White connects here, Black's lead on the board surges to around 80 points, and the dragon has no way to survive at all.]
+W[mg];B[of]C[This capture by Black seals White's fate.];
+C[Next, White wedges from the bottom.]N[第182手 白K8]W[jl];B[kl]
+C[When Black plays atari, White resigns.]N[第183手 黑L8])(;
+C[For White, connecting with the upper left is no problem right now; adding one move is enough.]
+N[变化：白146]W[ii];B[kg]
+C[However, Black also reinforces, and we see that Black naturally forms territory along the upper side; because weaknesses remain in this area, White does not dare to play forcefully here.]
+N[变化：黑147]))(;
+C[This also gives White a chance to reinforce at the top and control the two Black stones, leading to a trade between the two sides.]
+N[变化：白28]W[ff];B[ch]C[Next, Black pushes in this area.]
+N[变化：黑29](;C[For White, if he blocks,]N[变化：白30]W[bh];B[cj]
+C[then after Black captures this stone, the result of the trade is still satisfactory for Black, with a win rate of just over 60%.]
+N[变化：黑31])(;
+C[However, White can ignore it here and give atari from below.]
+N[变化：白30]W[ck];B[bh]C[Letting Black push through here.]
+N[变化：黑31];C[Around the center, the value of White's atari is huge.]
+N[变化：白32]W[dl];B[gf]
+C[So next, Black will roughly continue to build influence and settle the shape in the center.]
+N[变化：黑33];C[White plays a hane.]N[变化：白34]W[ge];B[gg]
+C[Black connects.]N[变化：黑35];C[Then White extends out.]N[变化：白36]
+W[he];B[bd]C[Black plays a hane in the corner.]N[变化：黑37];
+C[After White plays a diagonal move to settle things simply,]N[变化：白38]
+W[bf];B[be]N[变化：黑39];
+C[White takes the big point of approaching at the top, and the game remains long.]
+N[变化：白40]W[nc]))(;
+C[Even taking a step back, if White does not reinforce right away and is worried about the push and cut in this area, he should still give atari from the third line first.]
+N[变化：白28]W[ck];B[dl]C[If Black extends out.]N[变化：黑29];
+C[Then White bends from the top to reinforce.]N[变化：白30]W[ff]))(;B[dd]
+C[In fact, Black can move out right away now. After wedging,]N[变化：黑27];
+N[变化：白28]W[cc];B[fd]
+C[Black attaches to move out again, which is similar to the later actual game progression; White's shape here still has flaws.]
+N[变化：黑29]))(;C[If White connects,]N[变化：白26]W[ch](;B[dd]
+C[as one option, Black can directly wedge first and then]N[变化：黑27];
+N[变化：白28]W[cc];B[fd]
+C[attach to move out at the top, leaving a constant push-and-cut defect in this area.]
+N[变化：黑29])(;B[ed]
+C[Alternatively, Black can choose a diagonal move to settle his shape.]
+N[变化：黑27];C[When White connects,]N[变化：白28]W[ec];B[ff]
+C[Black then presses along from the outside, following through with the strategy of building influence; in short, White gains nothing here.]
+N[变化：黑29])))(;
+C[On the next move, the proper move for White is to jump here to reinforce the territory on the left.]
+N[变化：白22]W[em];B[jp]
+C[Then Black extends at the bottom to occupy a big point.]N[变化：黑23];
+C[White splits the side.]N[变化：白24]W[qj];B[ql]C[Black checks.]
+N[变化：黑25];C[White approaches again, making for a long game.]
+N[变化：白26]W[qf]))

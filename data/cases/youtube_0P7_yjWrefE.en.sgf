@@ -1,0 +1,546 @@
+(;FF[4]AP[LecturePipeline:1]BR[九段]CA[UTF-8]DT[2026-10-13]
+EV[第4届衢州烂柯杯决赛第1局]GM[1]GN[讲棋原话审阅稿]KM[7.5]
+PB[卞相壹]PW[申真谞]RE[W+R]RU[Chinese]SZ[19]WR[九段];B[qd];W[cp];B[dd];
+C[Both sides opened with star and komoku against star and komoku,]W[pp];B[qq]
+C[Black invaded at the 3-3 point in the lower right,];W[pq];B[qp];
+C[after White took sente,]W[po];B[rn];W[oc];B[pe];
+C[White approached the corners consecutively,]W[cf];B[ep]
+C[and Black also approached in the lower left;
+within just a few moves, tension is already running high on the board.]
+;
+C[On the next move, White chose the attachment-and-pull-back sequence to settle the bottom,]
+W[eq];B[fq];W[dq];B[fp]C[When Black connects,](;
+C[In the actual game, however, White directly played an extension that doubles as a pincer at the bottom,]
+W[jq];B[dn]C[when Black defended,];
+C[taking sente, White played the double approach in the upper left, which is also a standard AI pattern.]
+W[fc];B[df];W[dg];B[ef];W[cd];B[cc];W[ce];B[dc]
+C[After that, a classic double-approach joseki took shape in the upper left area,]
+;
+C[and next White made a two-space extension at the top.
+Now Black faces a choice again; the big points on the board are simply the relatively open sides, such as the top area,]
+W[ic](;B[nd]
+C[In the actual game, Black seemed to avoid a fight and chose to play a knight's move in the top area first. The purpose of this move is to press White low while expanding Black's own potential in the center and on the right side.]
+;
+C[On the next move, White was also very decisive: since Black didn't attack, White reinforced first. This move serves both offense and defense; after reinforcing, White is always aiming at a counterattack by pushing and cutting in this area, and as White gets stronger here, Black's stones in the lower left are gradually becoming weaker.]
+W[ch];B[qm]
+C[On the next move, Black played a diagonal move on the right side, still banking on this territory on the right.]
+;
+C[Next, White played a knight's move at the bottom. AI considers this two-move exchange unfavorable for Black. First, Black lost the possibility of invading at the bottom; second, the stronger White gets here, the weaker Black's few stones become,
+and this Black group in the lower left is a key to the outcome of this game.]
+W[lp];B[kc]
+C[On the next move, Black played a large knight's move from the top, which is also an obvious good point,]
+;C[while White played a diagonal move at the top,]W[eb];B[hd]
+C[when Black peeped,];C[White immediately pushed and cut;]W[de];B[ee];
+C[both players had researched this area.]W[ed];B[gb]
+C[On the next move, Black's knight's move down from the top was still the top choice,]
+;
+C[and White's solid connection is also the local fighting tesuji.
+Next, Black faced a choice again: here White is constantly eyeing the weakness of Black's small knight's move, so how should Black reinforce?]
+W[fd](;B[id]
+C[In the actual game, however, Black chose the second option of pressing in the center, also prioritizing the outside. However, in the top area, once this White stone becomes strong, there is always a push-and-cut counterattack, making the bump on the right very severe. At this point, Black's win rate dropped to around 22%.]
+;
+C[On the next move, White chose the most solid jumping net to capture the three stones.]
+W[fg];B[di]
+C[Black immediately peeped on the outside, looking to gain a profit.
+White likewise faced a choice on how to reinforce here,]
+(;
+C[In the actual game, White chose to connect from the left side. The intent of this move is also very clear,
+still eyeing Black's weakness in the bottom area.
+However, this way of playing also has its drawback,
+and in terms of win rate, the game was completely 50-50.]
+W[eg](;B[nc]
+C[In the actual game, Black also chose to hold back in this area,
+On the next move, Black simply reinforced at the top.]
+(;
+C[White next invaded on the right side to prevent Black from spreading both wings, which is also a good point.
+Because if White invades directly,
+Black can actually tenuki, since both of Black's sides are still relatively thick right now.
+As a result, White's move actually gained a profit.]
+W[pi](;B[qh]C[in the actual game, however, Black answered along the side.];
+C[On the next move, White continued to probe at the top with an attachment.]
+W[lc];B[ld]C[When Black played a hane,];
+C[White attached again from the corner,
+and after leaving various aji,]W[qc];
+B[rc]C[Black blocked with a hane,];C[White pressed once more,]W[ph];B[qg]
+C[and Black pulled back.
+After gaining consecutive profits in this area,
+After taking full advantage,]
+;
+C[White had also long spotted the vital point in the lower left area.
+White returned to the bottom with an attachment. At this point, White's win rate climbed to around 62%.]
+W[cn];B[cm]C[Black blocked with a hane,];C[White stood down,]W[bn];B[dp]
+C[and after Black wedged at the bottom,];C[how should Black protect this cut?]
+W[cq](;B[el]
+C[Black chose to protect the cut with a knight's move, which looks lighter and faster.
+As the saying goes, for protecting a cut in shape, a tiger's mouth is inferior to a knight's move;
+this knight's move looks like good shape, but under the current circumstances, it received a poor evaluation from AI. After this move was played, Black's win rate dropped to around 25%.
+AI consistently considers this Black group in the lower left to be very thin, with White eyeing it closely from all around.
+By playing the knight's move here in the game, White always has the possibility of cutting in this area.]
+(;
+C[Next, White played a knight's move on the right side. This is also a good point, because here White needs to guard against Black directly surrounding from here to launch a fierce attack on White's two stones.
+In the actual game, however, White chose to play the knight's move directly.
+At this point, the win rate is back to 50-50 for both sides. Next, Black also begins a surge.]
+W[ol];B[ge]
+C[Here, Black seizes the opportunity to immediately settle the shape in the upper area, extending in sente,]
+;C[and White captures.]W[fe];B[fb];W[ec];B[gf];W[ff](;B[lo]
+C[Of course, in the actual game, Black feels that White's shape on the right side still has some thinness, so after attaching once at the bottom,]
+;W[mp];B[mj]
+C[he pushes from the center. This move was also FineArt's top recommendation earlier. While threatening White, it increases the potential in the center, and as we can see, once it coordinates with the stones at the bottom and gets a chance to seal White in here, Black will also have territory-making potential along the lower side.
+So in this game, the corners and sides are all settled; aside from the remaining aji at the top, the key to the upcoming fight is actually this group in the lower left and the potential in the center.
+Therefore, these moves suggested by the AI require very strong reading and judgment; for human players to figure all of this out, especially when there are many variations at the top, accurately discovering such a line of thought is no simple matter.]
+(;
+C[On the next move, White makes a two-space jump at the top, and after this move is played, White's win rate drops straight from around 65% to 40%. White has made these two stones of his own heavy. However, we can only admire the moves suggested by the AI; it is very difficult for human players to find them.
+So while the win rate fluctuates when we look at it, in the minds of the two players, the game is probably still in a very close state, hard to call good or bad for either side.
+In the actual game, White chose a variation that escapes at the top while keeping an eye on the aji above.
+Returning to the fighting in the center area,
+White's escape in this area made his own group heavy, giving Black some chances.]
+W[mh];B[oj]
+C[But after making himself heavy at this point, Black seizes the opportunity to play another jumping peep, and Black gains the advantage.
+On the next move, White can no longer connect in this area;
+Next, Black took the lead.]
+(;C[So next, White escapes at the top,]W[kh];B[kj]
+C[while Black continues to pursue with a move in the center, all in sente.
+Black plays two moves in a row at the bottom,]
+;
+C[Constrained by Black's thickness in the upper area, White still has no choice but to run.
+In this way, after White escapes with a one-space jump in this area,]
+W[ih];B[hc]
+C[and then takes the opportunity to return and reinforce at the top; the move order is well-organized, and Black's play in this area is very smooth.
+At this point, judging from the win rate, Black has reached around 70%, leading by a bit more than ten points on the board.]
+;C[On the next move, White presses here,]W[pg];B[pf]C[Black bumps to hold,];
+C[and then White plays a knight's move in the center, smoothing out his own group while also eyeing a counterattack against the three black stones on the right and Black's group in the lower left.]
+W[hj];B[ij]
+C[And Black once again plays the top choice; on the next move, Black attaches here, which is a very compact way to play. This move probes White's response,
+because there is the means to hane and cut in this area at any time, so White still has concerns of his own.
+Black's attachment in the center hit the vital point and was very tight.]
+(;
+C[So in the actual game, White chose to hane from the bottom, still wanting to fight for the initiative in the lower area.]
+W[ik];B[ii]C[However, Black bumps,];C[and when White blocks,]W[hi];B[hh]
+C[Black cuts again,
+putting White to the test.];
+C[And living up to being the world's very top master, after Black's surge, White also plays a divine move that is the top choice: White wedges here, a very brilliant tesuji.
+It is often said that high-stakes games produce no masterpieces, but both sides' fighting performance in the center in this game gives it immense quality.
+This wedge in turn probes Black's response, just as brilliant as Black's earlier attachment in the center.
+In the center area, both players demonstrated strong skills.
+And White immediately responded with a divine wedge, steering the position here into an even more chaotic state.]
+W[lj](;B[li]
+C[In the actual game, Black's atari from the top while eyeing White's defect is the best response.]
+;C[Next, White extends out,]W[lk](;B[ki]
+C[then Black connects on the left,
+In the actual game, Black connects from the left side,]
+;C[and White's cut is also a completely forcing sequence.
+White cuts,]W[mi](;
+B[jl]
+C[and then Black plays a knight's move, which causes the win rate to fluctuate once again. At this point, Black's win rate drops from 71% to 58%.
+When we previously covered the World Pair Go Championship game with Choi Jeong as Black against Wang Xinghao and Yu Lijun, we introduced a similar liberty shape around the left side.
+However, in this spot, Black chose a slightly slack knight's move out,]
+;
+C[allowing White to seize the opportunity to connect at the top,
+and the game returned to an even position.]
+W[lh](;B[jk]
+C[Next, Black attached back from underneath, which was again poorly received.
+After this move was played, Black's win rate dropped to just 27%.
+In the actual game, after Black blocked here,]
+;
+C[White's next move, returning to the left side to give atari first, was a good move,]
+W[gh];B[hg]C[and when Black extended out,](;
+C[White chose to give atari from underneath on the next move, which ended up giving right back the position that had just been turned around, and White's win rate dropped from 73% to 36%.
+So where did the problem lie? Let's look at the variations here.
+Then why did White's win rate suddenly drop when White seemingly chose the main battlefield by giving atari around the bottom? The reason is that the atari was played from the wrong direction.
+In the actual game, White gave atari from underneath, making these two stones heavy,
+Next, both sides made mistakes here,
+Of course, White's response here cannot be called a mistake either; personally, I think he chose this intentionally, taking a slight local loss to gain sente and return to the fighting in the lower left.]
+W[mk];B[pj]C[so Black seized the opportunity to attach from the right side,](;
+C[At this point White chose to capture,
+What White was aiming for was to capture a ponnuki in sente here and make itself thick.]
+W[nj];B[qi]
+C[and Black bridged under on the third line.
+Looking at the right side area, Black gained something. Of course, this is analyzed from AI's perspective. From our human perspective, my personal feeling is that this was likely a deliberate choice by White. A difference like this is impossible for a player of White's strength to miss.
+So what does he intend to do after taking sente here? Many Go fans have probably already guessed it.]
+;
+C[Next, turning the spearhead around, White launched an all-out attack on Black's group on the left. This move carries a sente meaning, because after capturing the ponnuki here and becoming thick, attaching out at the top makes Black's central group thin,
+Sure enough, just as White anticipated,
+in the fighting around the lower left, White launched a fierce attack against Black,]
+W[gl];B[jh]C[so Black had no choice but to reinforce,];
+C[and then White made an extension from the bottom.
+White felt that although Black gained something here, playing two consecutive moves around the left side didn't seem like a loss for White either. Judging from the position, White's win rate is a bit over 30%, but it is actually extraordinarily complex. Next, the key to the situation is naturally how to settle this group on the left. As we mentioned in the opening stage, White's various earlier choices around the top and bottom were actually somewhat targeted at Black, and after going in circles and fighting for more than half the game, the final decisive battleground still returned to the lower left.]
+W[hq];B[hp]C[On the next move, Black pressed out at the bottom,];
+C[White played a tiger's mouth,]W[ip];B[ho]C[Black extended out to make shape,]
+;C[and then White continued by attaching.]W[io];B[bm]
+C[Next, Black blocked down on the left, which is also a vital point for eye space,]
+;
+C[and White immediately played a probing placement inside, continuing to pressure Black.
+Here let's also mention AI's view: AI thinks this Black group is still very thin and should settle as quickly as possible to avoid being overly exploited.]
+W[ck](;B[an]
+C[On the next move, Black played a hane on the first line.
+The contrast in second-half strength between these two players is stark, and Black was naturally well aware of it,
+so he did not make that choice here, instead playing a hane on the first line first,
+and the prior hane exchange actually turns out to be a loss, so the timing for the diagonal move in this area is missed.]
+;
+C[and White answered.
+As we mentioned earlier, Black lacks confidence in the endgame,]
+W[ao](;B[bk]
+C[so he devises a very fierce variation here. On the next move, Black plays an attachment underneath on the second line,]
+;C[and White pulls back here.]W[cj](;B[om]
+C[However, Black did not reinforce earlier, and at this point he is even less inclined to hurry to make life here. Next, Black surprisingly plays elsewhere, returning to the right side with an attachment. As we said before, Black feels that after making life, if White gets to play the endgame on the right side first, he has no confidence, so he unleashes an all-or-nothing move here to take a gamble. However, this play gives White an opportunity. At this moment, Black's win rate drops from 59% to 34%.
+while Black seemed to lack confidence in wrapping up the second half of the game, so he chose a risky, all-or-nothing approach on the left, forcibly playing tenuki to grab territory on the right.]
+;
+C[White, who is precise in the latter half of the game, seizes the opportunity and immediately begins a sequence of moves. White first pushes through,]
+W[qo];B[ro]C[Black blocks,];C[and then plays a hane, in impeccable order.]W[qr]
+;B[rr];C[Next, the atari is sente.]W[rq];B[rp]
+C[When Black connects,
+However, this area is actually a psychological battle between the two sides.]
+(;
+C[White figures that since Black values the right side so much, he will not easily play elsewhere from here. In the actual game, White chooses to give atari directly.]
+W[rs](;B[nl]
+C[However, Black, persisting in his course, chooses to play the hane on the left. This is a fighting-spirit move, still gambling on the life and death on the left to grab points.]
+;C[On the next move, White crosscuts here.]W[nm](;B[mm]
+C[Now, Black's atari is an overplay; after this move, Black's win rate is down to just 30%.
+In the actual game, Black is too greedy. On the next move, Black gives atari first,]
+;C[White extends out,]W[nn];B[ml]
+C[and then, instead of going back to capture this stone, Black surprisingly connects back here to forcibly attack White at the top. But this play goes too far and backfires on him. At this point, Black's win rate is only around 20%.
+However, Black was far too greedy at the critical moment and overplayed here,]
+;
+C[Once White seizes the opportunity, he gives Black no more chances. White's solid connection here is sente,
+and instead, after a series of moves by White,]
+W[nk];B[ok]C[and after Black blocks,];C[White's extension out is sente,]W[pl];
+B[pm]C[leaving Black no choice but to answer.];
+C[Then White pulling out underneath is sente again,]W[mn];B[lm]
+C[When Black pulls back,];
+C[and White's push is still sente.
+This stone comes to nothing, while in this area Black has actually played a string of nearly neutral points.
+secured the territory at the bottom,]
+W[ln];B[km];W[oi];B[ql]
+C[What is even worse is that after Black extends out here,
+Of course, Black's intention may be that he feels White is not yet completely alive in this area.]
+(;
+C[However, Black overlooked a brilliant move by White. On the next move, White clamps from above,
+the top choice. This move not only reinforces his own dragon, but also eyes the aji of the remaining stones at the top.
+If the top territory is destroyed, then even if Black lives on the left, his territory will not be enough.]
+W[le];B[lf]C[So at this moment, Black has no choice but to fight back.];
+C[However, White's atari is sente,]W[jg];B[ig]C[Black captures,];
+C[and when White plays another hane,]W[kf](;B[ke]
+C[Black has no choice but to return to the left to cut and atari.
+So in the game Black gives atari from the left to protect the territory.]
+;C[White extends out,]W[me];B[jf]C[Then when Black gives atari again,];
+C[White bends to give atari from below.]W[mf];B[kg]C[Black captures,](;
+C[On the next move, White plays a hane, which is a declaration of victory.
+However, White has already judged the situation clearly and calmly wraps up here,
+made life in sente with the group at the top,
+and maximized the points there.]
+W[of];B[md]C[forcing Black to reinforce at the top,];
+C[followed by a push in sente.]W[oe];B[od]
+C[and after Black blocks,
+Throughout the entire sequence of fighting on the right side, although Black started it by forcibly playing elsewhere, White fully protected the points at the top, gained a certain amount of points below, forced Black to play a string of neutral moves, and seized a precious sente. The game is practically over. Now Black's win rate is down to 2%, unable to cover the komi.]
+;
+C[On the next move, White returns to the left to wedge,
+By the time White took sente and returned to the left side, the game was already gone for Black.]
+W[do];B[eo]C[Black gives atari,];C[White connects back,]W[co];B[dm]
+C[and when Black reinforces the cutting point,];
+C[White plays a diagonal move here, threatening Black's cutting point to continue squeezing.
+At this moment, realizing he suffered a huge loss on the right side, Black has mentally collapsed.
+Therefore,]
+W[fm](;B[hm]
+C[Black now activates his all-or-nothing move.
+On the next move, instead of protecting the cut, he jumps below first,
+At the final moment, Black chose to force the issue in this area,]
+;W[hl];B[fj]
+C[then returns to the top with a knight's move,
+hoping to settle the shape here in sente and then return to play in the lower area.]
+;
+C[However, White gives him no such chance.
+White ignores Black's threat and cuts straight up.
+Now Black cannot save both of his groups.]
+W[en];B[gi]
+C[On the next move, Black cuts at the top, which is also the only move.];
+C[Next, White wedges from below, with very precise reading.]W[hn];B[gn]
+C[Black gives atari,];C[White simply connects.]W[in];B[gm]
+C[Then Black has no choice but to escape with the lower group first,];
+C[and White responds move for move by connecting.]W[fl];B[im]
+C[Black still needs to run back now,];
+C[so White's solid connection here is sente.]W[fn];B[fo]
+C[and after Black blocks,
+Although the lower group escapes,];
+C[once White plays a hane at the top,
+the group on the left has no way to live.]
+W[ek];B[ci]
+C[On the next move, Black pushes at the top, trying to save the group by attacking elsewhere,]
+;
+C[but White is very calm and directly captures the Black stones.
+and as a result, after White met force with force and forcibly captured Black's stones, the game ended immediately.]
+W[bj];B[fk]C[Black cuts again,];C[White plays an atari,]W[dl];B[em]
+C[When Black connects,];
+C[White wedges,
+and we see that Black has only two liberties, whereas White's few stones have three liberties.]
+W[bl];B[ej];W[dk];B[il];W[am];B[hk]
+C[Although Black uses the liberty-filling sequence to capture White's tail here,]
+;C[this trade is completely out of proportion.]W[cl];B[hr]
+C[When Black plays endgame below,];C[White plays a tiger's mouth,]W[ir];B[sr]
+C[and Black returns to the lower right to stand down and grab endgame points.];
+C[White calmly plays a hane at the bottom.]W[fr];B[gq]
+C[In the actual game, Black gives atari again,];C[White cuts again,]W[gr];B[iq]
+C[Black captures,];C[White gives atari from below,]W[hs];B[pr]
+C[and Black returns to the lower right to cut.
+The left and right sides are actually two miai endgame points.]
+;C[when White gives atari,]W[or];B[qs]C[Black captures,];
+C[Then White's capture is sente,]W[hq];B[go]C[Black connects back,];
+C[and next, after White blocks from the left,
+Black resigns. In this position, Black still cannot cover the komi. Both players fought fiercely in the first half of the game, full of fighting spirit and a battle of wits and courage, keeping the position very close.]
+W[bi])(;B[fn]
+C[For Black, if he reinforces the cutting point from below now, this group certainly won't die, though paying some price is unavoidable.]
+;
+C[After White bends here, Black lives painfully while White secures the territory, resulting in a big win for White as well.]
+W[bj]))(;
+C[In fact, to be more ruthless here, if White directly gives atari upwards,]
+W[md];B[og]C[even if Black plays a hane across,];
+C[after White captures here, killing this large White dragon is impossible for Black now.]
+W[kd]))(;B[me]C[Because giving atari from the right now would be pointless;];
+C[once White connects, there is still a double atari at the top and a cutting capture below.]
+W[ke]))(;
+C[White's block from above is still sente.
+Right now, if White forcibly plays elsewhere,]
+W[am];B[og]C[Black has the option of playing a hane first];W[oh];B[nh]
+C[and then forcibly destroying the eye to launch a desperate capturing race against White.]
+))(;B[ok]
+C[Here, the AI suggests that Black play atari at the top and endure, continuing to eye the threat against this White group while watching for a chance to return to the left side to reinforce.]
+))(;B[bj]
+C[The calm AI believes Black should still return to the left side and reinforce quickly to guard against a fierce attack from White.]
+;W[ci];B[cl]))(;
+C[capturing a stone on the left is now very tempting for White, as Black's cutting point remains.]
+W[am];B[em]C[After Black reinforces,];C[White can make an exchange at the top]
+W[le];B[kd];C[and then return to the lower right to give atari.]W[rs]))(;B[bj]
+C[By normal thinking, after Black crawls in this area];W[ci];B[cl]
+C[and bumps from below, this group is also alive.]))(;B[dk]
+C[In this case, if Black still chooses the diagonal move, the situation is different again.]
+;C[White can capture from the first line,]W[am])(;B[cj]
+C[Then Fine Art immediately suggests a sacrifice plan with a diagonal move from above.]
+;C[That makes White's wedge underneath sente.]W[do];B[en]
+C[When Black pulls back,];
+C[White's bump is also sente, constantly aiming at the cut here to squeeze through on the first line using Black's shortage of liberties.]
+W[cl];B[dm]C[Black connects again,];C[and White links under with a hane here.]
+W[bj];B[hm]
+C[Next, Black jumps in the center, reinforcing the shape while eyeing White's cutting points in this area,]
+;
+C[but White will also return to the right side.
+Whether playing the diagonal move here
+the value in points is considerable, and White has potential in this area.]
+W[pm];B[gi]C[As for cutting,];
+C[White has the knight's move in this area,
+and a trade is possible for both sides.
+If each side captures the other's stones, the game remains a half-point contest, which is extremely close.]
+W[ej]))(;B[dk]C[Black could play a diagonal move here,];
+C[and when White pulls back,]W[cj];B[cl]
+C[Black bumps, so there is no problem making life with this group,];
+C[though White would also return to the lower right area to continue grabbing endgame points,]
+W[qr];B[rr];
+C[which would make it a half-point game for both sides, though Black probably wasn't confident about such a variation.]
+W[pr]))(;C[and now White no longer dares to play this move,]W[qi];B[nj]
+C[otherwise, after Black connects back, White's own liberties in this area are also very tight, putting White at a disadvantage in the fight.]
+))(;
+C[First of all, White cannot overplay by forcing too hard; for example, if White attaches from above to forcibly separate Black,
+So playing forcefully here does not work for White.]
+W[ig];B[mk]
+C[then after Black returns to the center with an attachment,
+White's two stones are key stones that cannot be captured, or else it will become a one-sided position where White is attacked and exploited.]
+;C[And if White extends out,]W[ll];B[ml]C[Black presses again in sente,];
+C[and when White extends again,]W[lm];B[ok]
+C[Black still has a press in sente later, which can be held in reserve for now while playing abamboo joint here.]
+;C[Like this, if White extends again,]W[pl];B[qk]
+C[then Black jumps in this area to separate White.
+According to AI's analysis of this diagram, Black leads by more than 30 points on the board. Because for White, settling this group at the top is still very difficult, and at the same time we can see that in the fighting around the center, White cannot capture this Black group either.]
+;C[If White plays a knight's move in this area,]W[hm];B[mm]
+C[then next Black attaches once,];C[White reinforces again,]W[ln];B[hl]
+C[and then Black counterattacks with a cross-cut,];C[White pushes,]W[il];B[im]
+C[and after Black gives atari,];W[hk];B[jn]C[Black plays a tiger's mouth here;]
+;C[when White gives atari,]W[in];B[jm]
+C[Black connects, making the subsequent extension out severe while leaving a cutting point at the top,]
+;C[and when White captures here,]W[gl];B[io]
+C[Black gives atari and then pulls back,];C[White still needs to escape,]W[hn];
+B[ko]
+C[and after Black connects up,
+White's group at the top will become extremely bitter, and even if it doesn't die, it will likely suffer heavy losses.]
+)(;
+C[Here White should have given atari from the right side, treating these two stones lightly.
+So if played to this diagram, Black cannot attach down, which makes a big difference compared to the actual game.]
+W[nj];B[pj];W[qi];B[mk]
+C[If Black still chooses to push down in this area to fight White as in the actual game later,]
+;C[then White can follow by bending down.]W[nk];B[ml]
+C[Because when Black escapes,];
+C[White can treat the two stones on the left lightly.
+Forming a trade like this is still acceptable for White.]
+W[qk]))(;B[jh]
+C[On this move, Black should have given atari at the top to reinforce itself.])
+)(;B[kk]
+C[In the current position, AI consistently recommends that Black play more tightly by attaching here. What is the purpose of this attachment? It tightens White's liberties, giving White no chance to reinforce in the center and escape at the bottom.]
+;C[Because if White connects at the top now, as in the actual game later,]W[lh]
+;B[ll]C[Black can give atari first];W[mk];B[ml]
+C[and then give atari again,
+leaving White in a difficult spot.];
+C[If White extends out,]W[nk];B[nj]
+C[Black can connect out at any time, and White's liberties in the fight are extremely tight.]
+)(;B[kk];
+C[So White does not have time to escape around the bottom and return to the top to reinforce.]
+W[lh];B[ll];W[mk];B[ml];C[And if White chooses to capture,]W[nj];B[nk]
+C[then Black is happy to give atari,];
+C[and White has no choice but to connect.]W[mj];B[jl]
+C[Next, after Black returns to the center to fix the cutting point, the difference from the variation we showed earlier is that Black is on the outside and very thick, whereas White's group on the right still has concerns and owes a move here; meanwhile, looking from the left side to the center, several of White's stones have also become thin, so fighting like this actually favors Black.]
+)(;B[kk];
+C[Then White's strongest response at this point is to play a tight hane from underneath.]
+W[kl];B[lh]C[Next, Black first pushes at the top,];C[and after White blocks,]
+W[lg];B[jh]C[Black gives atari to reinforce itself.];
+C[Then White returns to the right side to give atari,]W[nj];B[mk]
+C[Black escapes,];C[and when White connects again,]W[ll];B[nk]
+C[Black gives atari.];
+C[Now White blocks on the right, and both sides will enter a very fierce variation in this area.]
+W[pj];B[mg]
+C[Now is the right timing for Black to cut at the top, testing White's response.]
+;C[If White chooses to give atari,]W[ng];B[nh]
+C[then Black can take advantage of White's shortage of liberties to cut here first]
+;W[mf];B[ni]C[and capture in sente,];W[mg];B[mm]
+C[and after making these exchanges, return to the bottom area to jump out. This will lead to a chaotic fight where both sides have their own concerns, but overall Black is thicker, with only this one group to settle, whereas White has thinness everywhere. In this way, Black's win rate is around 80%, leading by about ten points on the board.]
+)(;B[kk];W[kl];B[lh];W[lg];B[jh];W[nj];B[mk];W[ll];B[nk];W[pj];B[mg];
+C[Of course, there is also a peaceful resolution for both sides here. White can also choose to bend here and endure,]
+W[nh];B[ng]
+C[Black presses again,
+In this way, Black gains something at the top,];
+C[and then White connects.
+at the cost of these few stones being captured by White.]
+W[oh];B[hk]C[Next, Black returns to the left side to cut,];
+C[White plays an atari,]W[hl];B[gk]C[Black extends out,];
+C[then White bumps here,]W[jk];B[kg]C[Black captures,];
+C[and on the next move, White continues by pressing over.
+This way, both sides gain something; judging from the position, Black's win rate is a bit over 70%, and Black still holds the initiative.]
+W[gl]))(;B[mi]C[Here Black cannot connect toward the right,];
+C[for a reason similar to earlier: right now he would be subjected to a direct squeeze,]
+W[jj];B[ji];W[ki];B[jk];
+C[and with Black's key stones captured, the game would be over.]W[jh];B[jj]
+C[Although Black can push through and capture a few stones on the right, the loss in the center is too great, and those few stones still have remaining aji and forcing potential, so this does not work for Black.]
+))(;B[lk]
+C[After the wedge, if Black plays an atari from the lower area,
+Therefore, an atari from the lower area is out of the question for Black.]
+;C[White's pull back is inevitable, leaving Black with two cutting points.]
+W[li];B[jk]C[If Black reinforces on the left,];C[White cuts here,]W[mk];B[ll]
+C[Black extends out,];C[and after White plays an atari,]W[ji];B[jj];
+C[he attaches closely here; in this way, these two black stones are cut off by White, and White can still be satisfied with the fight.]
+W[ml])(;B[lk];W[li];B[mk]
+C[Then if Black returns to the right side to protect the cut at this point,];
+C[White can wedge and atari once more,]W[jj];B[ji]
+C[and next when Black runs again,];
+C[White's connection next is the vital point of the fight.]W[jk];B[jh]
+C[Black has no choice but to escape from the top,];
+C[White plays another atari,]W[jg];B[ig]C[Black can only capture,];
+C[and then after White plays an atari,]W[ki];B[ih];C[he naturally connects.]
+W[kk];B[pk]C[Black's four stones still need to be settled,];
+C[while White makes an exchange at the top]W[le];B[kd];
+C[and returns to the center to fix the cutting point, smoothing out his group while continuing to apply pressure on Black in the lower left, which is also a satisfactory diagram for White.]
+W[gl]))(;C[Then if White chooses to bump at the top,]W[ii];B[ik]
+C[Black naturally extends out,];C[White presses again,]W[hk];B[hl]
+C[Black plays a hane,];C[and when White plays another hane,]W[gl];B[gm]
+C[Black can play a double hane over; using the threat against White, after Black gets to the front, he not only makes the center smooth, but also reinforces the lower left, leaving Black with some vague potential here as well, so Black is naturally satisfied with this.]
+))(;C[if he jumps, he will be directly pushed through and cut by Black,]W[pj];
+B[ok];C[and if he plays this,]W[pk];B[pl]
+C[Black can simply bump and then cut, making the fight clearly tougher for White.]
+))(;
+C[Let's talk about the two ideas given by the AI. One is to take action directly in the upper area, capturing Black to secure the territory first, while treating these two stones lightly.]
+W[jc];B[kd];W[hc])(;
+C[The second idea is for White to cut first in the corner around here; the variations in this area are very interesting.]
+W[rd];B[pc]
+C[Black's strongest response is to reinforce in the corner, guarding against the possibility of White using various ataris and hanes in this area to make a ko and contend with Black.]
+;C[However, in this way, White can press once more.]W[pg];B[oj]
+C[Then, on the next move, if Black still attacks in the center area to try to separate White,]
+;
+C[White can extend out in this area. This extension carries sente implications,]
+W[re];B[rf]C[so Black needs to add a reinforcing move.];
+C[Then White returns to attach closely at the bottom, trying to seek a connection.
+However, Black's thinness in the upper right area cannot be ignored either. White can play an atari and angle-wedge at any time, and with this extra stone, Black on the side also becomes thinner.]
+W[pj];B[pf]
+C[So Black's proper move at this point is to bump here, protecting the defect in this area.]
+;
+C[Meanwhile, White still leaves forcing potential in the corner; on the next move, White extends out in sente,]
+W[qb];B[rb]C[and when Black attaches closely here,];
+C[White plays another atari.]W[pb];B[pd]
+C[For Black, connecting right now does not work,];
+C[otherwise, White plays a hane in the corner,]W[ra];B[sb]
+C[and Black descends again,];
+C[but as we can see, if White's tiger's mouth becomes sente, it is fatal for Black.]
+W[nb];B[se]C[If Black goes to reinforce now,];
+C[then once White descends here, there is still a bump in sente and connection means at the top; thus, if something happens on the upper side, with trouble breaking out in his own backyard, Black naturally cannot tolerate it.]
+W[lb])(;W[rd];B[pc];W[pg];B[oj];W[re];B[rf];W[pj];B[pf];W[qb];B[rb];W[pb];B[qe]
+C[Therefore, here for Black, the strongest next response is to play a solid turn here, capturing the two white stones.]
+;C[Then on the next move, White makes a tiger's mouth from the top,]W[nb];B[mb]
+C[and when Black plays a hane to stop it,];
+C[note that White should not rush to take action at this moment. Many fans might see that White has the means to push through here,
+However, taking action directly right now still requires worrying about White's own problems in this area.]
+W[od];B[oe]C[and if Black blocks,];
+C[White captures once, leaving a ko at the top along with local ko threats, so something comes up inside Black's territory.]
+W[pd])(;W[rd];B[pc];W[pg];B[oj];W[re];B[rf];W[pj];B[pf];W[qb];B[rb];W[pb];B[qe]
+;W[nb];B[mb];
+C[So White's proper move next is to calmly reinforce with a move, connecting the four stones back first. This way, the means at the top still exist.
+and since White has already connected and reinforced himself earlier,]
+W[pm];B[ci]C[If Black does not respond,];C[then White pushes on the next move,]
+W[od];B[pd]C[and if Black connects back,];
+C[having this stone at the top captured is unbearable for Black,]W[mc];B[lb]
+C[whereas when Black captures,];C[White plays an atari,]W[ne];B[md]C[and next,]
+;
+C[a tiger's mouth next connects directly,
+White escapes with everything in this way, so Black's fighting is naturally a failure.]
+W[of]))(;B[hc]
+C[Right now, Black could actually choose to bend directly at the top to reinforce and eliminate all the remaining aji along the upper side.]
+))(;
+C[However, the ever-perfectionist AI gave another plan here. At this point, AI suggests that White might as well take all the profit at the top first, which follows the same idea White had earlier.]
+W[jc];B[kd]C[When Black connects in this area,];C[White then pushes through.]
+W[hc];B[fb]C[Then, Black wedges here,];C[White connects,]W[ec];B[gc]
+C[Black pushes again,];
+C[and White cuts. These three Black stones cannot escape for the time being, because White's hane on the second line is still very severe.]
+W[gd];B[jb]C[On the next move, Black plays a hane here,];C[White next blocks,]
+W[ib];B[ge];W[fe];B[gf]
+C[and because tightening liberties on the outside is sente, the outside also becomes thick.]
+;W[ff];B[kb]
+C[and then Black returns to the top to connect. In this way, Black reinforces the territory in the upper right area,]
+;C[However, White also gains the means to capture the three stones.]W[fa];B[oj]
+C[Because if White plays elsewhere now, since Black has sente, surrounding here would be very severe.]
+))(;B[dm]
+C[The most solid way to play this move is still to calmly connect, minimizing White's aji as much as possible.]
+))(;B[co]
+C[Now Black could play a diagonal move in the lower left first to settle the shape,]
+;C[so when White makes a solid connection,]W[dp];B[bo]C[Black stands down,];
+C[White blocks again,]W[bp];B[cl]C[and Black reinforces;]))(;
+C[Of course, FineArt still thinks White could settle the bottom area first,]
+W[cn];B[cm];C[and after taking sente that way, then invade on the right side.]
+W[bn];B[dm]))(;B[mm];
+C[Because later in this area, White always has the resource of an attachment on the third line;]
+W[cn];B[cm]C[if Black plays a hane,];
+C[more aggressively, White can cut directly to start a fight with Black.]W[dm])
+(;B[fb]C[because Black gains consecutive sente peeps in this area.];W[ec];B[ge]
+;W[fe];B[gf]
+C[Now FineArt thinks Black has no need to hold back and should play all of these out,
+because once a fight really breaks out at the top later, Black might not get the chance to play them here.]
+;W[ff]))(;
+C[FineArt's first choice is to enter the center to take the main initiative, capping in the center while eyeing the fight in the lower left area.]
+W[fi])(;
+C[And if White must reinforce in the top area, the second choice is to play ajen (press closely) here. This minimizes Black's sente forcing moves in this area and creates conditions for various ways of moving out at the top later.]
+W[ff]))(;B[db]
+C[FineArt's recommendation is for Black to block in the corner area first, ready to wedge across on the second line at any time,]
+;C[and when White makes a solid connection here,]W[fb];B[hc]
+C[Black then blocks naturally. Blocking here also gives Black a thicker shape.]
+;
+C[Of course, after White next plays a large knight's move in this area, Black's three stones are completely immobilized,]
+W[gg];B[gf]C[attaching to get out here does not work,];
+C[as White has a diagonal move, and since the left side is reinforced with a tiger's mouth, Black's few stones cannot escape.]
+W[ge])(;B[db];W[fb];B[hc];W[gg];B[nc]
+C[Then after both sides make a trade in this area, on the next move Black can calmly reinforce once more at the top; this makes Black very solid along the upper side while leaving the choice to White.]
+;
+C[Because now we see that on one hand, White can add a move in the corner to capture the Black stones, which makes the corner territory very large,]
+W[bd];B[oi]
+C[but Black can then return to the right side to enclose. Black's formation spreading both wings also has considerable potential.]
+)(;B[db];W[fb];B[hc];W[gg];B[nc];
+C[And if White now chooses to invade and reduce the territory in this area,]
+W[qi];B[bb]
+C[then with a diagonal move on the second line, Black's corner can come back to life and live again. In that case, the game would still be roughly even.]
+))(;B[hd]C[or after playing a peep,];W[hc];B[di]
+C[turning to the left side to check White's few stones in this area.])(;B[bo]
+C[Of course, Black could also start directly on the left side, exchanging a knight's move at the bottom first,]
+;W[bp];B[di]C[and then pincering—that would also be a playable game.]))(;
+C[White can simply jump out,]W[cn];B[jp]
+C[so Black makes an extension around the bottom,];
+C[and White checks again—that would also be a playable game.]W[lq]))

@@ -3,6 +3,12 @@
   "defaultCase": "shin-yang-2026-10-09",
   "cases": [
     {
+      "id": "youtube_oz226AFRKs4",
+      "title": "李维清 · 卞相壹｜国手山脉杯16强战",
+      "data": "data/cases/youtube_oz226AFRKs4.json",
+      "sgf": "data/cases/youtube_oz226AFRKs4.sgf"
+    },
+    {
       "id": "youtube_0P7_yjWrefE",
       "title": "卞相壹 · 申真谞｜烂柯杯决赛第1局",
       "data": "data/cases/youtube_0P7_yjWrefE.json",

@@ -1,4 +1,9 @@
 {
   "app": "go-lecture-player",
-  "version": 1
+  "version": 2,
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "narration": false
 }
