@@ -232,7 +232,7 @@ new ResizeObserver(()=>renderChart()).observe($('chart-wrap'));
 new ResizeObserver(()=>{if(data)$('board').innerHTML=boardSvg(current());}).observe($('board'));
 window.addEventListener('hashchange',()=>{const match=location.hash.match(/move=(\d+)/);if(data&&match){selectedTopic=Number(match[1]);moveTo(chapterForMove(data,selectedTopic),false);}});
 try{
- const libraryResponse=await fetch('data/cases.json');if(!libraryResponse.ok)throw new Error('cases');
+ const libraryResponse=await fetch('data/cases.json',{cache:'no-store'});if(!libraryResponse.ok)throw new Error('cases');
  const library=await libraryResponse.json();
  const requested=new URL(location.href).searchParams.get('case')||library.defaultCase;
  const selected=library.cases.find(c=>c.id===requested);
@@ -240,7 +240,7 @@ try{
  const selector=$('case-select');selector.replaceChildren();
  for(const item of library.cases){const option=document.createElement('option');option.value=item.id;option.textContent=item.title;option.selected=item.id===selected.id;selector.append(option);}
  selector.addEventListener('change',()=>{const url=new URL(location.href);url.searchParams.set('case',selector.value);url.hash='';location.href=url.href;});
- const response=await fetch(selected.data);if(!response.ok)throw new Error('data');
+ const response=await fetch(selected.data,{cache:'no-store'});if(!response.ok)throw new Error('data');
  data=await response.json();
  document.title='听棋 · '+data.black+'与'+data.white;
  $('black-name').textContent=data.black;$('white-name').textContent=data.white;
