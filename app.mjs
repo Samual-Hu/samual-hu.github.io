@@ -244,6 +244,8 @@ try{
  selector.addEventListener('change',()=>{location.href=caseUrl(library.cases.find(c=>c.id===selector.value)).href;});
  const response=await fetch(selected.data,{cache:'no-store'});if(!response.ok)throw new Error('data');
  data=await response.json();
+ const hasEnglish=selected.languages?.includes('en')??data.translation?.status==='complete';
+ $('language').hidden=!hasEnglish;if(!hasEnglish)language='zh';
  editor=createReviewEditor({data,current,navigate:i=>moveTo(i,false),stop,refresh:()=>{rebuildTimeline();render();},notice:say});
  document.title='听棋 · '+data.black+'与'+data.white;
  $('black-name').textContent=data.black;$('white-name').textContent=data.white;

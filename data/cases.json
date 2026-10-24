@@ -3,46 +3,80 @@
   "defaultCase": "shin-yang-2026-10-09",
   "cases": [
     {
+      "id": "youtube_5fxA9bEEP-Q",
+      "slug": "lg-2026-round24-guzihao-nahyun",
+      "title": "辜梓豪 · 罗玄｜第31届LG杯24强",
+      "data": "data/cases/youtube_5fxA9bEEP-Q.json",
+      "sgf": "data/cases/youtube_5fxA9bEEP-Q.sgf",
+      "languages": [
+        "zh"
+      ]
+    },
+    {
       "id": "youtube_RXN6hIrMKo0",
       "slug": "lg-2026-round16",
       "title": "申真谞 · 李维清｜LG杯16强 · 待配句",
       "data": "data/cases/youtube_RXN6hIrMKo0.json",
-      "sgf": "data/cases/youtube_RXN6hIrMKo0.sgf"
+      "sgf": "data/cases/youtube_RXN6hIrMKo0.sgf",
+      "languages": [
+        "zh",
+        "en"
+      ]
     },
     {
       "id": "youtube_WWwBljCsgaw",
       "slug": "best-player-2026-game-2",
       "title": "申真谞 · 卞相壹｜第6届最高棋士战挑战赛第2局",
       "data": "data/cases/youtube_WWwBljCsgaw.json",
-      "sgf": "data/cases/youtube_WWwBljCsgaw.sgf"
+      "sgf": "data/cases/youtube_WWwBljCsgaw.sgf",
+      "languages": [
+        "zh",
+        "en"
+      ]
     },
     {
       "id": "youtube_0P7_yjWrefE",
       "slug": "lanke-2026-final-1",
       "title": "卞相壹 · 申真谞｜烂柯杯决赛第1局",
       "data": "data/cases/youtube_0P7_yjWrefE.json",
-      "sgf": "data/cases/youtube_0P7_yjWrefE.sgf"
+      "sgf": "data/cases/youtube_0P7_yjWrefE.sgf",
+      "languages": [
+        "zh",
+        "en"
+      ]
     },
     {
       "id": "youtube_oz226AFRKs4",
       "title": "李维清 · 卞相壹｜国手山脉杯16强战",
       "data": "data/cases/youtube_oz226AFRKs4.json",
       "sgf": "data/cases/youtube_oz226AFRKs4.sgf",
-      "slug": "kuksu-2026-round16"
+      "slug": "kuksu-2026-round16",
+      "languages": [
+        "zh",
+        "en"
+      ]
     },
     {
       "id": "youtube_ExR8qh0kHmY",
       "title": "李志贤 · 申真谞｜烂柯杯半决赛",
       "data": "data/cases/youtube_ExR8qh0kHmY.json",
       "sgf": "data/cases/youtube_ExR8qh0kHmY.sgf",
-      "slug": "lanke-2026-semifinal"
+      "slug": "lanke-2026-semifinal",
+      "languages": [
+        "zh",
+        "en"
+      ]
     },
     {
       "id": "shin-yang-2026-10-09",
       "title": "申真谞 · 杨楷文｜烂柯杯16强",
       "data": "data/lecture.json",
       "sgf": "data/game.sgf",
-      "slug": "lanke-2026-round16"
+      "slug": "lanke-2026-round16",
+      "languages": [
+        "zh",
+        "en"
+      ]
     }
   ]
 }
